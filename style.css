@@ -496,12 +496,12 @@ pointer-events: none;
 }
 
     
-/* Responsive Design for Mobile Screens */
+
 @media (max-width: 768px) {
 
     .img-eff {
-        width: 100%; /* Full width on mobile */
-        height: auto; /* Auto height to maintain aspect ratio */
+        width: 100%; 
+        height: auto; 
     }
     .about-section {
         flex-direction: column;
@@ -516,7 +516,7 @@ pointer-events: none;
     }
 
     .abt-img img {
-        width: 100%; /* Make the image responsive */
+        width: 100%; 
         height: auto; 
 
 
@@ -543,7 +543,7 @@ pointer-events: none;
 @media (max-width: 576px) {
 
     .img-eff{
-        width: 90%; /* Slightly smaller for very small screens */
+        width: 90%; 
         height: auto;
     }
     .abt-img {
@@ -593,59 +593,6 @@ pointer-events: none;
     border-radius: 3px;
     font-weight: bold;
 }
-
-
-
-
-@media (max-width: 768px) {
-    .projects-section h2{
-                           
-        background-color: white;
-        width: 100%;
-        height: 45px;
-        padding-top: 7px;
-        text-align: center;
-        margin-bottom: 30px;
-        border-radius: 6px;
-        border: gold 2px solid;
-}
-   
-    .projects-section h3{
-                           
-                           background-color: white;
-                           height: 45px;
-                           padding-top: 7px;
-                           text-align: center;
-                           margin-bottom: 30px;
-                           border-radius: 6px;
-                           border: gold 2px solid;
-    }
-
-    .projects-section h4{
-                           
-        background-color: white;
-        height: 45px;
-        padding-top: 7px;
-        text-align: center;
-        margin-bottom: 30px;
-        border-radius: 6px;
-        border: gold 2px solid;
-}
-
-
-    .projects-container {
-        flex-direction: row;
-        gap: 10px; 
-    }
-    
-    .project-card {
-        max-width: 200px;
-        max-height: 200px;
-    }
-}
-
-
-
 
 
 
@@ -783,69 +730,76 @@ pointer-events: none;
 
 
 
+@media screen and (max-width: 768px) {
+    .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project-card {
+        flex: 1 1 calc(50% - 20px); 
+        height: 200px; 
+        margin-bottom: 
+    }
+
+    .card-front img {
+        width: 100%;
+        height: 100%; 
+        object-fit: cover; 
+    }
+}
+    
+
 
 
 
 /*-----------------skills section-----------*/
 
-.skills{
-    padding: 20px;
+.skills {
+    padding: 50px 0;
     background: rgba(255, 255, 255, .1);
     box-shadow: 0 25px 45px rgba(0, 0, 0, .2);
     border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, .5);
     font-family: Roboto Slab;
     margin: 0 auto;
-    height: 600px;
-}
-.skills h2{
-               background-color: white;
-               width: 450px;
-               margin-left: 35%;
-               height: 50px;
-              padding-top: 5px;
-              text-align: center;
-              border-radius: 10px;
-              box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.skills h2 {
 
-
-@media (max-width: 768px){
-
-
-    .skills h2{
-                  background-color: #ffffff;
-                  margin-left: auto;
-                  width: 100%;
-                  padding-top: 10px;
-                  border: gold 2px solid;
-    }
+    text-align: center; /* Center the text */
+    background-color: white; /* White background */
+    width: 410px; /* Fixed width */
+    margin: 0 auto 30px auto; /* Center the container horizontally and add margin below */
+    padding: 10px; /* Add some padding for better appearance */
+    border-radius: 8px; /* Optional: round corners for a smooth look */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    color: #333; /* Text color */
+    font-size: 28px;
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
 }
+
+.skills h3{
+           color: black;
+}
+
 .skills-container {
     display: flex;
     justify-content: space-around;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 20px;
-    font-family: Roboto Slab;
-    margin-top: 50px;
-    
-    
 }
 
-.skill-group {
-    width: 100%;
-    max-width: 300px;
-    perspective: 1000px;
-    height: 400px; 
-}
-
+/* Flip Card Styles */
 .flip-card {
     background-color: transparent;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    width: 350px;
+    height: 420px;
+    perspective: 1000px; /* 3D perspective */
 }
 
 .flip-card-inner {
@@ -853,49 +807,79 @@ pointer-events: none;
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.6s;
     transform-style: preserve-3d;
-    border-radius: 8px;
 }
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    box-sizing: border-box; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Make both sides of the card transparent */
 .flip-card-front {
     background-color: rgba(255, 255, 255, 0.1);
-    color: black;
+    color: white;
 }
 
 .flip-card-back {
     background-color: rgba(255, 255, 255, 0.1);
-    color: black;
+    color: #333;
     transform: rotateY(180deg);
-    padding: 20px;
+    text-align: left;
 }
 
-.flip-card h3 {
-    margin: 0;
-}
-
-.flip-card ul {
-    list-style: none;
+/* List inside flip card */
+.flip-card-back ul {
+    list-style-type: none;
     padding: 0;
-    margin-top: 10px;
 }
+
+.flip-card-back ul li {
+    padding: 5px 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flip-card {
+        width: 300px;
+        height: 320px;
+        margin: 10px;
+    }
+
+    .flip-card-inner {
+        height: 100%;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
 
 
   /*-------------------- contact section ----------------------*/
