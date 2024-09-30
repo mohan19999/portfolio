@@ -495,42 +495,61 @@ pointer-events: none;
     color: white;
 }
 
+    
+/* Responsive Design for Mobile Screens */
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
-        text-align: center;
+        padding: 10px;
     }
 
-    .img-eff{
-               width: 380px;
-               border: 1px solid red;
-               background-color: white;
+    .abt-img {
+        width: 250px;
+        height: 350px;
+        margin-bottom: 20px;
     }
 
-   
-    
-    .about-section .abt-img {
-        margin: 0 auto 20px;
-        max-width: 80%;
-        height: 80%;
-        border: gold 2px solid;
-        border-radius: 10px;
+    .abt-img img {
+        height: 300px;
+        border-radius: 50%;
     }
-    
-    .about-section .abt-txt {
-        margin-left: 0;
-        padding: 0 10px;
-        font-size: medium;
+
+    .abt-txt {
+        padding: 20px;
     }
-    
+
     .about-section h2 {
         font-size: 28px;
     }
-    
+
     .about-section p {
         font-size: 16px;
     }
+
+    .about-section .btn {
+        padding: 10px 20px;
+    }
 }
+
+@media (max-width: 576px) {
+    .abt-img {
+        width: 200px;
+        height: 300px;
+    }
+
+    .abt-img img {
+        height: 250px;
+    }
+
+    .about-section h2 {
+        font-size: 24px;
+    }
+
+    .about-section p {
+        font-size: 14px;
+    }
+}
+
 
 
 
