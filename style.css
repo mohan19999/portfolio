@@ -498,19 +498,28 @@ pointer-events: none;
     
 /* Responsive Design for Mobile Screens */
 @media (max-width: 768px) {
+
+    .img-eff {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Auto height to maintain aspect ratio */
+    }
     .about-section {
         flex-direction: column;
         padding: 10px;
     }
 
     .abt-img {
-        width: 250px;
-        height: 350px;
+        width: 100%;
+        height: auto;
+
         margin-bottom: 20px;
     }
 
     .abt-img img {
-        height: 300px;
+        width: 100%; /* Make the image responsive */
+        height: auto; 
+
+
         border-radius: 50%;
     }
 
@@ -532,9 +541,16 @@ pointer-events: none;
 }
 
 @media (max-width: 576px) {
+
+    .img-eff{
+        width: 90%; /* Slightly smaller for very small screens */
+        height: auto;
+    }
     .abt-img {
-        width: 200px;
-        height: 300px;
+        width: 90%;
+        height: auto;
+
+       
     }
 
     .abt-img img {
