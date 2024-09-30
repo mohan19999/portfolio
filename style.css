@@ -770,7 +770,7 @@ pointer-events: none;
 
     text-align: center; /* Center the text */
     background-color: white; /* White background */
-    width: 410px; /* Fixed width */
+    width: 300px; /* Fixed width */
     margin: 0 auto 30px auto; /* Center the container horizontally and add margin below */
     padding: 10px; /* Add some padding for better appearance */
     border-radius: 8px; /* Optional: round corners for a smooth look */
